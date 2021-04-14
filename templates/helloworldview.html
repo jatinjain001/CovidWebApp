@@ -29,11 +29,11 @@
         <option>{{country}}</option> {% endfor %} </select> -->
 
     <h1 style="color: white; text-align:center"><span style="color: red;">COVID-19</span> WORLDWIDE DATA</h1>
-    <form method="post" class="d-flex justify-content-center align-items-center" action=" ">
+    <form method="post" class="d-flex justify-content-center align-items-center" action="">
         {% csrf_token %}
-        <select class="form-control" style="width: 200px;" name="selectedcountry ">{% for country in mylist %}
+        <select class="form-control" style="width: 200px;" name="selectedcountry">{% for country in mylist %}
             <option>{{country}}</option> {% endfor %} </select>
-        <input type=submit class="btn btn-danger" name=" "> </form>
+        <input type="submit" class="btn btn-danger" name="selectedcountry"> </form>
     <h1 style="color: white; text-align: center; margin-top: 150px">{{selectedcountry}}</h1>
     <div class="d-flex justify-content-center align-items-center">
         <div class="container" style="background-color: orange;height: 100px; width: 200px">
@@ -66,7 +66,7 @@
     <p style="margin-top: 30px;color: grey;text-align: center;">Developed By <span style="color: white;">Vanshika Sikarwar</span>
     </p>
     <h1>{{selectedcountry}}</h1>
-    <p>New: {{new}}</p>
+    <p >New: {{new}}</p>
     <p>Recovered: {{recovered}}</p>
     <p>Total: {{total}}</p>
     <p>Critical: {{critical}}</p>
